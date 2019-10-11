@@ -1,6 +1,6 @@
 (ns home
   (:require [coast]
-            [components :refer [container hero table thead td tr tbody th link-to button-to]]
+            [components :refer [container hero table thead td tr tbody th link-to button-to tweet]]
             [helpers]))
 
 
@@ -56,7 +56,28 @@
       [:h3 {:class "f3 f2-l fw3 mb0 lh-title"}
         "🎉 Fun"]
       [:p {:class "lh-copy measure"}
-        "Make web development fun again with consistent syntax and lightning fast feedback via the REPL"]]])])
+       "Make web development fun again with consistent syntax and lightning fast feedback via the REPL"]]])
+
+   [:div {:class "pv6 hero-topo-bg white"}
+    [:div {:class "cf mw8 center near-black hero-topo-bg "}
+     [:h3 {:class "tc white"}
+      "Testimonials"]
+     [:div {:class "fl w-100 w-third-ns ph2"}
+      (tweet {:body     "The sourcecode is at https://github.com/dawran6/codez .
+And you guessed it. it is built on @coastonclojure #clojure"
+              :user     "Daw-Ran Liou"
+              :picture  "https://pbs.twimg.com/profile_images/901139738874175488/PL1xTvES_normal.jpg"
+              :tweet-id 1172283010923675648})]
+     [:div {:class "fl w-100 w-third-ns ph2"}
+      (tweet {:body     "This #Clojure reader behavior surprises me every time"
+              :user     "Paulus Esterhazy"
+              :picture  "https://pbs.twimg.com/profile_images/565153108301320192/pVErksXO_normal.jpeg"
+              :tweet-id 1182678131167125509})]
+     [:div {:class "fl w-100 w-third-ns ph2"}
+      (tweet {:body     "clojurewalk.com is built with @coastonclojure 🏝😎"
+              :user     "Daw-Ran Liou"
+              :picture  "https://pbs.twimg.com/profile_images/901139738874175488/PL1xTvES_normal.jpg"
+              :tweet-id 1167568365092655105})]]]])
 
 
 (defn doc [request]

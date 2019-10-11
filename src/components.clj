@@ -182,3 +182,15 @@
   (when (some? s)
     [:div {:class "f6 red"}
      s]))
+
+(defn tweet [{:keys [body user picture tweet-id]}]
+  [:div {:class "bg-white pa3 br2"}
+   [:div {:class "dt"}
+    [:a {:class "dtc"}
+     [:img {:class "br-100"
+            :src   picture
+            :alt   "twitter avatar"}]]
+    [:h3 {:class "dtc v-mid pl3"}
+     user]]
+   [:p {:lang "en" :dir "ltr"}
+    body]])
